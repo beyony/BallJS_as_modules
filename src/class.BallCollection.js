@@ -2,7 +2,7 @@ import Ball from './class.ball';
 
 
 export default class BallCollection {
-    
+
     constructor() {
         this.ballArray = new Array();
     }
@@ -45,6 +45,12 @@ export default class BallCollection {
         for (var i = 0; i < this.getSize(); i += 1) {
             this.ballArray[i].setColor(red, green, blue, alpha);
         }
+    }
+
+    setPosition(pixel) {
+        this.ballArray.forEach((ball)=> {
+            ball.setPosition(pixel);
+        });
     }
 
     // TRANSLATE ALL BALLS (TO LEADER POS)
@@ -181,5 +187,14 @@ export default class BallCollection {
             var ball = this.ballArray[i];
             ball.forceToDelay(pixel);
         }
+    }
+
+    spark(intensity) {
+        this.ballArray.forEach((ball) => {
+            ball.setLeader({
+                x: ball.x * Math.random() * intensity,
+                y: ball.y * Math.random() * intensity
+            })
+        });
     }
 }

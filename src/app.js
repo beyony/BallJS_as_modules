@@ -17,8 +17,9 @@ let mainInterval = setInterval(() => {
 
 
 window.addEventListener('click', (e) => {
-    ballCollection.setLeader({
+    ballCollection.setPosition({
         x: e.clientX,
         y: e.clientY
     });
+    ballCollection.spark(10);
 });

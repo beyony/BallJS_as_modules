@@ -1,4 +1,5 @@
 import CANVAS from './module.canvas';
+import COLOR_CONFIG from './colorConfig';
 
 export default class Ball {
     constructor() {
@@ -15,10 +16,10 @@ export default class Ball {
         this.frictionfactor = 0.9;
         this.follower = this;
 
-        this.red = "0";
-        this.green = "0";
-        this.blue = "0";
-        this.alpha = "1";
+        this.red = COLOR_CONFIG.ballColor.red;
+        this.green = COLOR_CONFIG.ballColor.green;
+        this.blue = COLOR_CONFIG.ballColor.blue;
+        this.alpha = COLOR_CONFIG.ballColor.alpha;
     }
 
     getColor() {
@@ -30,6 +31,11 @@ export default class Ball {
         this.green = green;
         this.blue = blue;
         this.alpha = alpha;
+    }
+
+    setPosition(pixel) { 
+        this.x = pixel.x;
+        this.y = pixel.y;
     }
 
     draw() {
