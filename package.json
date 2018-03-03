@@ -6,7 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack",
-    "publish": "    targetDirName=\"new-$(date '+%Y-%m-%d_%H-%M-%S')\" && cp -r dist ~/lucaheider/stage/${targetDirName} && echo \"...published files of ./dist to: ${targetDirName}\" && open . ~/lucaheider/stage/ "
+    "publish_backup":"",
+    "publish": "    targetDirName=\"new-$(date '+%Y-%m-%d_%H-%M-%S')\" && cp -r dist ~/lucaheider/stage/${targetDirName} && echo \"...published files of ./dist to: ${targetDirName}\" && open . ~/lucaheider/stage/ ",
+    "postpublish": "git commit -a -m\"new published site: ${targetDirName}\" && git checkout -b backup_${targetDirName} && git commit -a -m\"branch for backup: ${targetDirName}\" && git checkout master && git status"
   },
   "author": "",
   "license": "ISC",
