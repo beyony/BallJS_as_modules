@@ -1,16 +1,16 @@
 {
   "name": "magic",
   "version": "1.0.0",
-  "description": "",
+  "description": "removing",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack",
     "publish_backup":"",
-    "publish": "    targetDirName=\"new-$(date '+%Y-%m-%d_%H-%M-%S')\" && cp -r dist ~/lucaheider/stage/${targetDirName} && echo \"...published files of ./dist to: ${targetDirName}\" && open . ~/lucaheider/stage/ ",
-    "postpublish": "git commit -a -m\"new published site: ${targetDirName}\" && git checkout -b backup_${targetDirName} && git commit -a -m\"branch for backup: ${targetDirName}\" && git checkout master && git status"
-  },
-  "author": "",
+    "publish": "targetDirName=\"new-$(date '+%Y-%m-%d_%H-%M-%S')\" && cp -r dist ~/lucaheider/stage/${targetDirName} && echo \"...published files of ./dist to: ${targetDirName}\" && open . ~/lucaheider/stage/ ",
+    "postpublish": "git commit -a -m\"new published webpage: ${targetDirName}\" && git checkout -b ${targetDirName} && git config branch.${targetDirName}.description \"branch for backup: ${targetDirName}\" && git checkout master && git status"
+  }, 
+  "author": "beyony",
   "license": "ISC",
   "dependencies": {
     "express": "4.16.2",
@@ -23,5 +23,7 @@
     "webpack-cli": "^2.0.10"
   }
 }
+
+
 
 
