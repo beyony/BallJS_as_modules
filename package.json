@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack",
-    "publish": "  targetDirName=\"new-$(date '+%Y-%m-%d_%H-%M-%S')\" && cp -r dist ~/lucaheider/stage/${targetDirName} && echo \"...published files of ./dist to: ${targetDirName}\" && open . ~/lucaheider/stage/ "
+    "publish": "    targetDirName=\"new-$(date '+%Y-%m-%d_%H-%M-%S')\" && cp -r dist ~/lucaheider/stage/${targetDirName} && echo \"...published files of ./dist to: ${targetDirName}\" && open . ~/lucaheider/stage/ "
   },
   "author": "",
   "license": "ISC",
