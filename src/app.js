@@ -21,5 +21,5 @@ window.addEventListener('click', (e) => {
         x: e.clientX,
         y: e.clientY
     });
-    ballCollection.spark(10);
+    ballCollection.spark(1000);
 });

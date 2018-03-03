@@ -11,7 +11,7 @@ export default class Ball {
         this.xdistance = 0;
         this.ydistance = 0;
 
-        //this.leader = new Pixel(400, 400);
+        this.leader;
         this.trackspeed = 0.4;
         this.frictionfactor = 0.9;
         this.follower = this;
@@ -36,6 +36,10 @@ export default class Ball {
     setPosition(pixel) { 
         this.x = pixel.x;
         this.y = pixel.y;
+    }
+
+    setLeader(pixel) {
+        this.leader = pixel;
     }
 
     draw() {

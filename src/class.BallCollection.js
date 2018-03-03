@@ -48,7 +48,7 @@ export default class BallCollection {
     }
 
     setPosition(pixel) {
-        this.ballArray.forEach((ball)=> {
+        this.ballArray.forEach((ball) => {
             ball.setPosition(pixel);
         });
     }
@@ -192,8 +192,8 @@ export default class BallCollection {
     spark(intensity) {
         this.ballArray.forEach((ball) => {
             ball.setLeader({
-                x: ball.x * Math.random() * intensity,
-                y: ball.y * Math.random() * intensity
+                x: ball.x + (Math.random() - 0.5) * intensity,
+                y: ball.y + (Math.random() - 0.5) * intensity
             })
         });
     }
