@@ -12,7 +12,7 @@ ballCollection.setLeader(CANVAS.getCenter());
 let mainInterval = setInterval(() => {
     ballCollection.process();
     ballCollection.drawAll();
-}, 30);
+}, 30); 
 
 
 
