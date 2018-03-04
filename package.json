@@ -8,7 +8,7 @@
     "build": "webpack",
     "publish_backup":"",
     "publish": "targetDirName=\"new-$(date '+%Y-%m-%d_%H-%M-%S')\" && cp -r dist ~/lucaheider/stage/${targetDirName} && echo \"...published files of ./dist to: ${targetDirName}\" && open . ~/lucaheider/stage/ ",
-    "post_publish": "git commit -a -m \"new published webpage: ${targetDirName}\" && git checkout -b ${targetDirName} && git config branch.${targetDirName}.description \"branch for backup: ${targetDirName}\" && git checkout master && git status"
+    "post_publish": "git commit -a -m \"new published webpage: ${targetDirName}\" "
   }, 
   "author": "beyony",
   "license": "ISC",
